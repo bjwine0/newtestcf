@@ -4,7 +4,6 @@ body {
   letter-spacing: 0.15em;
   background-color: rgb(26, 189, 201);
 }
-
 h1 {
   display: center;
   width: 150px;
@@ -43,7 +42,6 @@ a {
   text-decoration: none;
   padding: 6px 18px 5px 18 px;
 }
-
 img {
   padding: 6px 18px 5px 18 px;
   width: 600px;
