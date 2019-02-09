@@ -102,9 +102,3 @@ console.log(carType);
 
 alert(userName + ', all finished!.  Your score was ' + correctCount + ' out of 6.');
 
-
-
-
-
-
-//allow scroll
