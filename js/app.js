@@ -97,48 +97,30 @@ function burgerFun() {
 }
 burgerFun();
 
-
-
-// question with several answers that are be correct, hold them in array
-// user only needs one correct 6 guesses
-//question is: what kind of cars have i owned? answer is: Nissan 300ZX, Chevy suburban, honda accord
-
-// function carFun(){
-//   var carsOwned = ['nissan 300zx', 'chevy suburban', 'honda accord'];
-//   var carCounter = 6
-//   while(carCounter > 0) {
-//     var carType = prompt('What make and model car have I owned before?');
-//     if (carsOwned.includes(carType)) {
-//       alert(userName + ', GREAT GUESS!!');
-//       console.log(carType);
-//       correctCount++;
-//       break;
-//   }
-
-
-
-
-//     var carType = prompt('What make and model car have I owned before?');
-//     if (carsOwned.includes(carType)) {
-//       alert(userName + ', GREAT GUESS!!');
-//       console.log('car ' + correctCount);
-//       correctCount++;
-//       break;
-//     } if (!carType.includes(carsOwned)) {
-//       alert('This is a tricky question, guess again.');
-//       carCounter++;
-//       console.log(carCounter);
-//     } while (carCounter < 6); {
-//     alert('I have driven a nissan 300zx, chevy suburban, and a honda accord.');
-//     }
-    
-// } 
-// carFun();
+function carFun(){
+  var carsOwned = ['nissan 300zx', 'chevrolet suburban', 'honda accord'];
+  var carCounter = 6;
+  while(carCounter > 0) {
+    var carType = prompt('What make and model car have I owned before? You have ' + carCounter + ' attempt(s) left.');
+    if (carsOwned.includes(carType.toLowerCase())) {
+      alert(userName.toUpperCase([0]) + ', great guess!');
+      alert('I have owned a ' + carsOwned[0] + ', ' + carsOwned[1] + ', and ' + carsOwned[2] + '.');
+      console.log(carType);
+      correctCount++;
+      break;
+    } else if (!carType.includes(carsOwned)) {
+      alert('Nope, didn\'t own one of those. Guess again.');
+      carCounter--;
+      console.log(carCounter);
+    }
+  } if (carCounter === 6); {
+    alert('Yeah I know, who cares what I\'ve owned!? BUT, I loved driving my ' + carsOwned[0] + ', ' + carsOwned[1] + ', and ' + carsOwned[2] + '.');
+  }
+}
+carFun();
 
 if (correctCount >= 4) {
   alert('Thanks for playing my game, you anwered ' + correctCount + ' correctly. I feel like we know each other already!');
 } else {
   alert('Thanks for playing my game, you anwered ' + correctCount + ' correctly. Contact me so we can get to know each other better!');
 }
-
-
